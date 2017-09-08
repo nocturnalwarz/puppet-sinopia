@@ -47,6 +47,11 @@ packages:
         # if package is not available locally, proxy requests to 'npmjs' registry
     proxy: npmjs
 
+  # Scoped packages
+  '@*/*':
+    allow_access: all
+    allow_publish: admin
+
 #####################################################################
 # Advanced settings
 #####################################################################
@@ -86,4 +91,3 @@ https_proxy: <%= @https_proxy %>
 # increase it if you have "request entity too large" errors
 #max_body_size: 1mb
 max_body_size: <%=@conf_max_body_size %>
-    
